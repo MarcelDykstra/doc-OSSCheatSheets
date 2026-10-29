@@ -452,10 +452,10 @@ OPTIONS=(... !strip ... debug ...)                            # during "makepkg 
 > curl <url>                                # Get response from server at <url>.
   # e.g. "> curl -s 6.ipquail.com/ip"       # Get silently the current outward facing IPv6 address through server response at "6.ipquail.com/ip".
 > wget <url>...                             # Download files from internet at <url> or multiple <url>.
-> ssh-keygen -t rsa -b 4096 -C "user_email@host.domain"   # Generate SSH public/private RSA-keys (optionally give no passphrase).
-> ssh-keygen -t rsa -b 4096 -C "user@host"                # Generate SSH public/private RSA-keys (optionally give no passphrase).
-> ssh-copy-id -i <key.pub> <user>@<host>                  # Securely copy SSH public-key <key.pub> to <user> at <host>, authorising future logins.
-> ssh <user>@<host>                                       # Remote secure shell SSH login for <user> at <host>.
+> ssh-keygen -t ed25519 -a 100 -C "user_email@host.domain"  # Generate SSH public/private ED25519-keys (optionally give no passphrase).
+> ssh-keygen -t ed25519 -a 100 -C "user@host"               # Generate SSH public/private ED25519-keys (optionally give no passphrase).
+> ssh-copy-id -i <key.pub> <user>@<host>                    # Securely copy SSH public-key <key.pub> to <user> at <host>, authorising future logins.
+> ssh <user>@<host>                                         # Remote secure shell SSH login for <user> at <host>.
 > scp [<user>@<s.host>:]<s.file|s.path> [<user>@<d.host>:]<d.file|d.path>
   # Secure copy <s.file|s.path> from [<user>@<s.host>] to <d.file|d.path> at [<user>@<d.host>].
 > scp -r -p [<user>@<s.host>:]<s.file|s.path> [<user>@<d.host>:]<d.file|d.path>
